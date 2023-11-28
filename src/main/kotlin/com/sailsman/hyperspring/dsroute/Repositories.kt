@@ -14,5 +14,5 @@ interface ItemRepository : CrudRepository<Item, Long> {
 
 interface AreaRepository : CrudRepository<Area, Long> {
     fun getById(id: Long): Area?
-    fun getAllThatConnectTo(area: Area): Iterable<Area>
+    fun getAllByConnectionsContains(area: Area): Iterable<Area>
 }
