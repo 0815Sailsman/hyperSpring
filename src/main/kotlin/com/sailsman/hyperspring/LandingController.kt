@@ -11,7 +11,7 @@ class LandingController {
     @GetMapping("/")
     fun landing(model: Model): String {
         model["title"] = "Landing"
-        return "landing"
+        return "index"
     }
 
 }
