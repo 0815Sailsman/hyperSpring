@@ -1,4 +1,10 @@
 <div id="productsWrapper" th:fragment="productList(products)">
     <h1>hello list of products</h1>
-    <a th:each="product: ${products}" th:text="${product.displayName}" th:href="${product.viewName}"></a>
+    <button
+            th:each="product: ${products}"
+            th:text="${product.displayName}"
+            th:hx-get="${product.viewName}"
+            hx-swap="innerHTML"
+            hx-target="body"
+    ></button>
 </div>
